@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="ml">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Birthday Dear</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <style>
+        body {
+            font-family: 'Noto Serif Malayalam', serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #09814f;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 800px;
+            height: 80vh;
+            overflow-y: auto;
+            padding: 20px;
+            background-color: white;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            border-radius: 8px;
+        }
+
+        .container p {
+            text-align: justify;
+            line-height: 1.6;
+            font-size: 1.6em;
+        }
+
+        @media (max-width: 600px) {
+            .container {
+                height: 90vh;
+                padding: 15px;
+            }
+            .container p {
+                font-size: 1em;
+            }
+        }
+
+        .play-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.899);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 9999; /* Ensure it's above other content */
+        }
+
+        .play-button {
+            background-color: #841e2c;
+            color: white;
+            border: none;
+            font-size: 2em;
+            cursor: pointer;
+        }
+    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+Malayalam&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="play-overlay" id="playOverlay">
+        
+            <button type="button" class="play-button" onclick="playAudio()">Click Here to Read</button>
+        
+    </div>
+    <div class="container">
+        <p>
+            പാത്തു നിനക്ക് ഞാന്‍ ഈ തന്ന ഗിഫ്റ്റ് ഇഷ്ടപെട്ടെന്ന് എനിക്ക് ഒരു ഉറപ്പുമില്ല വേറൊന്നുമല്ല
+            നീ പറയും ഈ message ഇടാനാണേല്‍ വാട്സാപ്പില്‍ ഇട്ട പോരെന്നു. നിങ്ങക്ക് ഇത് വെറുമൊരു
+            message മാത്രമാകാം.... പക്ഷെ അതിലുപരി ഈ സമയം നീ നിന്‍റ വീട്ടിലും koodaanu ഹോസ്റ്റലില്‍
+            ആണേല്‍ പിന്നെ എന്തെങ്കിലും ചെയ്യരുന്നു അപ്പൊ ഈ സമയത്ത് message ഇടല്‍ മാത്രെ നടക്കു
+            അപ്പോള്‍ ആ message ഇടല്‍ ഒരു വെറൈറ്റി രീതിയില്‍ നിനക്ക് തന്നാല്‍ കൊള്ളാം എന്ന് തോന്നിയോണ്ട
+            ഇങ്ങനെ ചെയ്തേ.... എന്‍റ proffession enna orith വെച്ച് തരുന്ന ഒരു type gift ആയിട്ട് കൂട്ട് 😅, ഇങ്ങനല്ല
+            ഞന്‍ ഉദ്ദേശിച്ചത് ഇതിലും കുറച്ചൂടെ അടിപൊളിയാക്കാന്‍ പ്ലാന്‍ ഉണ്ടാര്‍ന്നു നമ്മട ലവ് time line പിന്നെ ഞന്‍
+            അവൈലബിള്‍ അല്ലേലും നിനക്ക് ചാറ്റ് ചെയ്ത് auto reply തരുന്ന പോലെ... പക്ഷെ സമയം കിട്ടാനൊണ്ട ഇത്രേം
+            മാത്രെ ചെയ്യാന്‍ പറ്റിയോള്..... ന്തായാലും ഇതൊക്കെ എങ്ങനുണ്ടെന്ന് ഉള്ള മറുപടി എനിക്ക് വാട്സാപ്പില്‍ 
+            അയച്ചിട്ട് മാത്രെ കിടന്നുറങ്ങാവു. കേട്ടെല്ലോ.......
+
+            Be with me always....... I Love U ❤️❤️❤️
+            <br>
+            <br>
+
+            <button type="button" class="btn btn-primary btn-lg custom-button" onclick="prevPage()">Main Menu / Back</button><br>
+        </p>
+    </div>
+
+    <script>
+         function playAudio() {
+            var audio = new Audio('img/njan.m4a'); // Replace 'your_audio_file.mp3' with your audio file path
+            audio.play();
+            document.getElementById('playOverlay').style.display = 'none'; // Hide play overlay after playing
+        }
+
+        // Function to handle page load
+        window.onload = function() {
+            document.getElementById('playOverlay').style.display = 'flex'; // Show play overlay on page load
+        };
+
+    </script>
+
+    <script>
+        function prevPage() {
+            console.log("Button clicked"); // Log message to console
+            window.location.href = 'newpage.html';
+        }
+    </script>
+
+    <!-- jQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!-- Bootstrap JavaScript -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
